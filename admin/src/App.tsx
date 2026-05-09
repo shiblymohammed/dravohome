@@ -25,6 +25,7 @@ import Blog from './pages/Blog';
 import ShopByRoom from './pages/ShopByRoom';
 import Promotions from './pages/Promotions';
 import Backup from './pages/Backup';
+import Catalogues from './pages/Catalogues';
 import Phase2Overview from './pages/phase2/Phase2Overview';
 import Coupons from './pages/phase2/Coupons';
 import Reviews from './pages/phase2/Reviews';
@@ -169,6 +170,14 @@ function App() {
               element={
                 <ProtectedRoute adminOnly>
                   <ErrorBoundary><Backup /></ErrorBoundary>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="catalogues"
+              element={
+                <ProtectedRoute adminOnly>
+                  <ErrorBoundary><Catalogues /></ErrorBoundary>
                 </ProtectedRoute>
               }
             />

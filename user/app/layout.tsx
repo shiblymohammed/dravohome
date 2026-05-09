@@ -1,5 +1,6 @@
         import type { Metadata } from "next";
 import { Hammersmith_One, Playfair_Display, Inter, Abril_Fatface } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 import "@/src/styles/select-override.css";
 import Navbar from "@/src/components/layout/Navbar";
@@ -51,11 +52,14 @@ export const metadata: Metadata = {
     description: "Premium furniture for your dream home",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const headersList = await headers();
+    const pathname = headersList.get('x-pathname') || headersList.get('x-invoke-path') || '';
+    const isCatalogue = pathname.startsWith('/catalogue/');
     return (
         <html lang="en" className="overflow-x-clip" data-scroll-behavior="smooth" suppressHydrationWarning>
             <head>
@@ -87,15 +91,15 @@ export default function RootLayout({
                     <ToastProvider>
                         <CartProvider>
                             <WishlistProvider>
-                                <WelcomeOfferModal />
-                                <OfferMarquee />
-                                <Navbar />
-                                <main className="overflow-x-clip">
+                                {!isCatalogue && <WelcomeOfferModal />}
+                                {!isCatalogue && <OfferMarquee />}
+                                {!isCatalogue && <Navbar />}
+                                <main className={isCatalogue ? '' : 'overflow-x-clip'}>
                                     {children}
                                 </main>
-                                <Footer />
-                                <MobileFooter />
-                                <MobileNav />
+                                {!isCatalogue && <Footer />}
+                                {!isCatalogue && <MobileFooter />}
+                                {!isCatalogue && <MobileNav />}
                             </WishlistProvider>
                         </CartProvider>
                     </ToastProvider>

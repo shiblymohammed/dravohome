@@ -75,6 +75,7 @@ const NAV: NavGroup[] = [
       { path: '/blog',         label: 'Blog',              adminOnly: true },
       { path: '/shop-by-room', label: 'Shop By Room',      adminOnly: true },
       { path: '/promotions',   label: 'Promotions',        adminOnly: true },
+      { path: '/catalogues',   label: 'Catalogues',        adminOnly: true },
       { path: '/backup',       label: 'Backup & Restore',  adminOnly: true },
     ],
   },

@@ -25,6 +25,7 @@ requests==2.32.5
 # --- Media & Images ---
 cloudinary==1.36.0
 Pillow==11.0.0
+qrcode[pil]==8.2
 
 # --- Payments ---
 razorpay==2.0.0
