@@ -1,0 +1,205 @@
+@import './Categories.css';
+@import './Promotions.css';
+
+.hero-settings-page {
+  padding: 24px;
+}
+
+.hero-settings-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.hero-tabs {
+  display: flex;
+  border-bottom: var(--border-width-thin) solid var(--border-primary);
+  background: var(--bg-elevated);
+}
+
+.hero-tab {
+  flex: 1;
+  padding: 16px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: 0.95rem;
+}
+
+.hero-tab:hover {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.hero-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--color-beta);
+  background: var(--bg-card);
+}
+
+.hero-tab-content {
+  padding: var(--space-5) var(--space-6);
+}
+
+.hero-section h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+  font-size: var(--text-lg);
+}
+
+.hero-help {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-6);
+}
+
+.hero-slides-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hero-slide-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-4);
+  border: var(--border-width-thin) solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+}
+
+.slide-image-preview {
+  width: 120px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.slide-image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-image {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.slide-details {
+  flex: 1;
+}
+
+.slide-details h4 {
+  margin: 0 0 var(--space-1) 0;
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.slide-details p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.btn-edit-slide {
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-card);
+  border: var(--border-width-thin) solid var(--border-hover);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.btn-edit-slide:hover {
+  background: var(--bg-elevated);
+  border-color: var(--color-alpha);
+}
+
+.btn-add-slide {
+  padding: var(--space-4);
+  background: var(--bg-card);
+  border: var(--border-width-thin) dashed var(--border-hover);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  font-weight: var(--font-semibold);
+  color: var(--text-muted);
+  margin-top: var(--space-2);
+  transition: all var(--transition-fast);
+}
+
+.btn-add-slide:hover {
+  background: var(--bg-elevated);
+  border-color: var(--color-alpha);
+  color: var(--color-alpha);
+}
+
+.hero-row {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.featured-products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.featured-product-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3) var(--space-1) var(--space-1);
+  background: var(--bg-elevated);
+  border: var(--border-width-thin) solid var(--border-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+.product-chip-img {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.btn-add-product {
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-card);
+  border: var(--border-width-thin) dashed var(--border-hover);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.btn-add-product:hover {
+  background: var(--bg-elevated);
+  border-color: var(--color-alpha);
+  color: var(--color-alpha);
+}

@@ -642,4 +642,13 @@ export class ApiClient {
       cache: 'no-store'
     });
   }
+
+  static async getHeroSettings() {
+    return request<any>(
+      "/v1/settings/hero/",
+      {},
+      {},
+      { revalidate: 60, tags: ['hero-settings'] }
+    );
+  }
 }

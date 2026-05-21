@@ -13,6 +13,8 @@ import BlogSection from "@/src/components/homepage/BlogSection";
 import Testimonial from "@/src/components/homepage/Testimonial";
 import { generateMetadata as genMeta } from '@/src/lib/seo/utils';
 import { generateOrganizationSchema } from '@/src/lib/seo/structured-data';
+import Script from 'next/script';
+import { ApiClient } from '@/src/lib/api/client';
 
 export async function generateMetadata(): Promise<Metadata> {
   return genMeta({
@@ -23,17 +25,19 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-export default function HomePage() {
+export default async function HomePage() {
   const organizationSchema = generateOrganizationSchema();
+  const heroSettings = await ApiClient.getHeroSettings().catch(() => null);
 
   return (
     <>
-      <script
+      <Script
+        id="org-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <div className="relative bg-creme">
-        <Hero />
+        <Hero settings={heroSettings} />
         <div className="relative">
           <BestSellers />
           <Categories />

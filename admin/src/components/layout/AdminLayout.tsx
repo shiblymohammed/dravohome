@@ -72,6 +72,8 @@ const NAV: NavGroup[] = [
     id: 'content', label: 'Content', icon: Icons.content,
     color: 'var(--color-epsilon)',
     items: [
+      { path: '/hero-settings', label: 'Hero Sections' },
+      { path: '/company-profile', label: 'Company Profile', adminOnly: true },
       { path: '/blog',         label: 'Blog',              adminOnly: true },
       { path: '/shop-by-room', label: 'Shop By Room',      adminOnly: true },
       { path: '/promotions',   label: 'Promotions',        adminOnly: true },

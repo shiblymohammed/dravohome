@@ -1,0 +1,28 @@
+.company-profile-page {
+  padding-bottom: 40px;
+}
+
+.company-profile-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.hero-row {
+  display: flex;
+  gap: 16px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

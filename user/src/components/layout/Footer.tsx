@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Column 1 */}
           <div className="flex flex-col gap-2">
             <span className="text-[10px] uppercase tracking-widest text-tango mb-2">Explore</span>
-            <a href="/about" className="text-sm text-text-muted hover:text-ivory transition-colors">About Us</a>
+            <a href="/company-profile" className="text-sm text-text-muted hover:text-ivory transition-colors">Company Profile</a>
             <a href="/products" className="text-sm text-text-muted hover:text-ivory transition-colors">All Products</a>
             <a href="/blogs" className="text-sm text-text-muted hover:text-ivory transition-colors">Blog</a>
           </div>

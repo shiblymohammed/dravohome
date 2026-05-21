@@ -24,6 +24,8 @@ import Staff from './pages/Staff';
 import Blog from './pages/Blog';
 import ShopByRoom from './pages/ShopByRoom';
 import Promotions from './pages/Promotions';
+import HeroSettings from './pages/HeroSettings';
+import CompanyProfile from './pages/CompanyProfile';
 import Backup from './pages/Backup';
 import Catalogues from './pages/Catalogues';
 import Phase2Overview from './pages/phase2/Phase2Overview';
@@ -162,6 +164,22 @@ function App() {
               element={
                 <ProtectedRoute adminOnly>
                   <ErrorBoundary><Promotions /></ErrorBoundary>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="hero-settings"
+              element={
+                <ProtectedRoute>
+                  <ErrorBoundary><HeroSettings /></ErrorBoundary>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="company-profile"
+              element={
+                <ProtectedRoute adminOnly>
+                  <ErrorBoundary><CompanyProfile /></ErrorBoundary>
                 </ProtectedRoute>
               }
             />

@@ -66,7 +66,10 @@ export default function MobileNav() {
   return (
     <>
       {/* Top Navbar */}
-      <div className="flex md:hidden fixed top-0 left-0 right-0 z-50 h-12 bg-transparent shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]">
+      <div 
+        className="flex md:hidden fixed left-0 right-0 z-50 h-12 bg-transparent shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]"
+        style={{ top: "var(--marquee-height, 0px)" }}
+      >
         <div className="h-full w-full flex items-center">
 
           {/* Hamburger Button - Square */}
@@ -197,9 +200,10 @@ export default function MobileNav() {
 
       {/* Sidebar Menu */}
       <div
-        className={`md:hidden fixed left-0 top-12 bottom-0 w-72 bg-creme z-50 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform shadow-2xl
+        className={`md:hidden fixed left-0 bottom-0 w-72 bg-creme z-50 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform shadow-2xl
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
         `}
+        style={{ top: "calc(var(--marquee-height, 0px) + 3rem)" }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Menu Content */}
